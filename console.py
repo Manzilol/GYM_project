@@ -42,6 +42,7 @@ all_members = member_repository.select_all()
 for member in all_members:
     print(member.__dict__)
 
+
 # pdb.set_trace()
 
 

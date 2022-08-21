@@ -1,5 +1,7 @@
 from db.run_sql import run_sql
 from models.booking import Booking
+import repositories.member_repository as member_repository
+import repositories.session_repository as session_repository
 
 def save(booking):
     sql = " INSERT INTO bookings (member_id, session_id, notes) VALUES (%s, %s, %s) RETURNING id"
@@ -22,6 +24,21 @@ def select_all():
         booking = Booking(row['member'], row['session'], row['notes'], row['id'])
         bookings.append(booking)
     return bookings
+
+def select(id):
+    sql = "SELECT * FROM bookings WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results[0]
+        member = member_repository.select(result['member_id'])
+        session = session_repository.select(result['session_id'])
+        booking = Booking(member, session, result['notes'], result['id'])
+    return booking
+
+        
+
 
 def delete(id):
     sql = "DELETE FROM bookings WHERE id = %s"

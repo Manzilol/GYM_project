@@ -20,4 +20,13 @@ member_repository.save(member1)
 member1 = Member('Samus Aran', 23, 'female')
 member_repository.save(member1)
 
+session1 = Session("Pilates", "F1-1", 30, 15, 3)
+session_repository.save(session1)
+
+session2 = Session("Trampolines", "F0-4", 90, 30, 4)
+session_repository.save(session2)
+
+session3 = Session("Free weights", "F2-5", 60, 6, 2)
+session_repository.save(session3)
+
 # pdb.set_trace()

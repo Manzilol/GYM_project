@@ -38,7 +38,8 @@ booking_repository.save(booking2)
 booking3 = Booking(member3, session2, "This is the closest it feels to being back in space")
 booking_repository.save(booking3)
 
-
+all_members = member_repository.select_all()
+print (all_members.__dict__)
 # pdb.set_trace()
 
 

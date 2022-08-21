@@ -12,3 +12,14 @@ def save(member):
 def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
+
+
+def select_all():
+    members = []
+    sql = "SELECT * FROM members"
+    results = run_sql(sql)
+
+    for row in results:
+        member = Member(row['name'], row['age'], row['sex'], row['id'])
+        members.append(member)
+    return member

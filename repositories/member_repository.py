@@ -9,3 +9,6 @@ def save(member):
     member.id = results[0]['id']
     return member
 
+def delete_all(member):
+    sql = "DELETE FROM members"
+    run_sql(sql)

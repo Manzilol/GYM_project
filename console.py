@@ -36,7 +36,7 @@ booking2 = Booking(member1, session3, "I chuck norris need to improve my deadlif
 booking_repository.save(booking2)
 
 booking3 = Booking(member3, session2, "This is the closest it feels to being back in space")
-booking_repository.save(booking1)
+booking_repository.save(booking3)
 
 
 # pdb.set_trace()

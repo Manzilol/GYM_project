@@ -14,19 +14,6 @@ def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
-# def select(id):
-#     human = None 
-#     sql = "SELECT * FROM humans WHERE id = %s"
-#     values = [id]
-#     results = run_sql(sql, values)
-#     # checking if the list returned by `run_sql(sql, values)` is empty. Empty lists are 'fasly' 
-#     # Could alternativly have..
-#     # if len(results) > 0 
-#     if results:
-#         result = results[0]
-#         human = Human(result["name"], result["id"])
-#     return human
-
 def select(id):
     member = None
     sql = "SELECT * FROM members WHERE id = %s"
@@ -48,7 +35,13 @@ def select_all():
         members.append(member)
     return members
 
+def update(member):
+    sql = "UPDATE members SET (name, age, sex) = (%s, %s, %s) WHERE id = %s"
+    values = [member.name, member.age, member.sex, member.id]
+    run_sql(sql, values)
+
 def delete(id):
     sql = "DELETE FROM members WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+

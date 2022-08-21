@@ -37,8 +37,7 @@ def select(id):
         booking = Booking(member, session, result['notes'], result['id'])
     return booking
 
-        
-
+def update(booking)
 
 def delete(id):
     sql = "DELETE FROM bookings WHERE id = %s"

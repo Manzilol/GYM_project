@@ -25,6 +25,10 @@ def select(id):
         session = Session(result['name'], result['room'], results['duration'], results['capacity'], results['difficulty'], results['id'])
     return session
 
+def update(session):
+    sql = "UPDATE sessions SET (name, room, duration, capacity, difficulty) = (%s, %s, %s) WHERE id = %s"
+    values = [session.name, session.room, session.duration, session.capacity, session.difficulty, session.id]
+    run_sql(sql, values)
 
 def select_all():
     sessions = []

@@ -10,6 +10,6 @@ def save(session):
     session.id = results[0]['id']
     return session
 
-def delete_all(session):
+def delete_all():
     sql = "DELETE FROM sessions"
     run_sql(sql)

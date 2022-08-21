@@ -8,6 +8,6 @@ def save(booking):
     booking.id = results[0]['id']
     return booking
 
-def delete_all(booking):
+def delete_all():
     sql = "DELETE FROM bookings"
     run_sql(sql)

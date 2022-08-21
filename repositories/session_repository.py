@@ -13,3 +13,19 @@ def save(session):
 def delete_all():
     sql = "DELETE FROM sessions"
     run_sql(sql)
+
+
+def select_all():
+    sessions = []
+    sql = "SELECT * FROM sessions"
+    results = run_sql(sql)
+
+    for row in results:
+        session = Session(row['name'], row['age'], row['sex'], row['id'])
+        sessions.append(session)
+    return session
+
+def delete(id):
+    sql = "DELETE FROM sessions WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

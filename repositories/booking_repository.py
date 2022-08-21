@@ -12,3 +12,18 @@ def delete_all():
     sql = "DELETE FROM bookings"
     run_sql(sql)
 
+
+def select_all():
+    bookings = []
+    sql = "SELECT * FROM bookings"
+    results = run_sql(sql)
+
+    for row in results:
+        booking = Booking(row['member'], row['session'], row['notes'], row['id'])
+        bookings.append(booking)
+    return bookings
+
+def delete(id):
+    sql = "DELETE FROM bookings WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

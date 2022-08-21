@@ -1,3 +1,4 @@
+from unicodedata import name
 from db.run_sql import run_sql
 
 from models.member import Member
@@ -23,3 +24,8 @@ def select_all():
         member = Member(row['name'], row['age'], row['sex'], row['id'])
         members.append(member)
     return members
+
+def delete(id):
+    sql = "DELETE FROM members WHERE name = %s"
+    values = [id]
+    run_sql(sql, values)

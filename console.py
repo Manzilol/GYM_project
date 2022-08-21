@@ -15,7 +15,7 @@ member1 = Member('Chuck Norris', 17, 'male')
 member_repository.save(member1)
 
 member2 = Member('Mr T', 25, 'male')
-member_repository.save(member1)
+member_repository.save(member2)
 
 member3 = Member('Samus Aran', 23, 'female')
 member_repository.save(member3)

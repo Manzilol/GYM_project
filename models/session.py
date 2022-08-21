@@ -7,3 +7,4 @@ class Session:
         self.capacity = capacity
         self.difficulty = difficulty
         self.id = id
+

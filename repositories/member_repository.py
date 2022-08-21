@@ -27,7 +27,7 @@ def delete_all():
 #         human = Human(result["name"], result["id"])
 #     return human
 
-def select():
+def select(id):
     member = None
     sql = "SELECT * FROM members WHERE id = %s"
     values = [id]

@@ -14,6 +14,17 @@ def delete_all():
     sql = "DELETE FROM sessions"
     run_sql(sql)
 
+def select(id):
+    session = None
+    sql = "SELECT * FROM sessions WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+    
+    if results:
+        result = results[0]
+        session = Session(result['name'], result['room'], results['duration'], results['capacity'], results['difficulty'], results['id'])
+    return session
+
 
 def select_all():
     sessions = []

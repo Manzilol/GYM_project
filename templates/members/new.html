@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Human</h2>
+<h2>Add a New Member!</h2>
 
-<form action="/humans" method="POST">
+<form action="/members" method="POST">
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" age="age">
+
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" sex="sex">
+
         <input type="submit">
     </div>
 </form>

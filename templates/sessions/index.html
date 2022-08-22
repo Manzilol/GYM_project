@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Sessions:</h1>
+
+{% for session in sessions %}
+
+<section>
+    <p>Name:{{ session.name }}</p> 
+    <p>Room:{{ session.room }}</p> 
+    <p>Duration:{{ session.duration }}</p> 
+    <p>Capacity:{{ session.capacity }}</p> 
+    <p>Difficulty:{{ session.difficulty }}</p> 
+    <p>I.D:{{ session.id }}</p> 
+
+    <a href="/sessions/{{ session.id }}/edit">Edit</a>
+    <form action="/sessions/{{ session.id }}/delete" method = "POST">
+        <input type="submit" value="DELETE">
+    </form>
+</section>
+
+{% endfor %}
+{% endblock %}

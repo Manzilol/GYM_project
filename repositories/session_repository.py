@@ -25,7 +25,7 @@ def select(id):
     return session
 
 def update(session):
-    sql = "UPDATE sessions SET (name, room, duration, capacity, difficulty) = (%s, %s, %s) WHERE id = %s"
+    sql = "UPDATE sessions SET (name, room, duration, capacity, difficulty) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [session.name, session.room, session.duration, session.capacity, session.difficulty, session.id]
     run_sql(sql, values)
 
@@ -37,7 +37,7 @@ def select_all():
     for row in results:
         session = Session(row['name'], row['room'], row['duration'], row['capacity'], row['difficulty'], row['id'])
         sessions.append(session)
-    return session
+    return sessions
 
 def delete(id):
     sql = "DELETE FROM sessions WHERE id = %s"

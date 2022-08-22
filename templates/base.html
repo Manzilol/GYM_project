@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <title>Welcome to the Gym</title>
+</head>
+<body>
+    <header>
+        <h1>Gym App</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li>
+                    Members
+                    <ul>
+                        <li><a href="/members">View all members</a></li>
+                        <li><a href="/members/new">Add a new member</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Sessions
+                    <ul>
+                        <li><a href="/sessions">View all sessions</a></li>
+                        <li><a href="/sessions/new">Add a new session</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Bookings
+                    <ul>
+                        <li><a href="/bookings">View all bookings</a></li>
+                        <li><a href="/booking/new">Add a new booking</a></li>
+                    </ul>
+                </li>  
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

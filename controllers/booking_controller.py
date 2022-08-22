@@ -29,6 +29,15 @@ def create_booking():
     booking_repository.save(new_booking)
     return redirect("/bookings")
 
+@bookings_blueprint.route("/bookings/<id>/edit")
+def edit_booking(id):
+    booking = booking_repository.select(id)
+    members = member_repository.select_all()
+    sessions = session_repository.select_all()
+    return render_template('bookings/edit.html', booking=booking, members=members, sessions=sessions)
+
+
+
 
 
 

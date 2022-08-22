@@ -37,73 +37,13 @@ def edit_booking(id):
     return render_template('bookings/edit.html', booking=booking, members=members, sessions=sessions)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# @bookings_blueprint.route("/bookings/new")
-# def new_booking():
-#     return render_template("/booking/new.html")
-
-# @bookings_blueprint.route("/bookings", methods=["POST"])
-# def create_booking():
-#     name = request.form["name"]
-#     room = request.form["room"]
-#     duration = request.form["duration"]
-#     capacity = request.form["capacity"]
-#     difficulty = request.form["difficulty"]
-#     new_session = Session(name, room, duration, capacity, difficulty)
-#     session_repository.save(new_session)
-#     return redirect("/sessions")
-
-# @bitings_blueprint.route("/bitings", methods=["POST"])
-# def create_biting():
-#     human_id = request.form["human_id"]
-#     zombie_id = request.form["zombie_id"]
-#     human = human_repository.select(human_id)
-#     zombie = zombie_repository.select(zombie_id)
-#     new_biting = Biting(human, zombie)
-#     biting_repository.save(new_biting)
-#     return redirect("/bitings")
-
-# @bookings_blueprint.route("/bookings/<id>/edit")
-# def edit_session(id):
-#     session = session_repository.select(id)
-#     return render_template('sessions/edit.html', session=session)
-
-# @bookings_blueprint.route("/bookings/<id>", methods=["POST"])
-# def update_session(id):
-#     name = request.form["name"]
-#     room = request.form["room"]
-#     duration = request.form["duration"]
-#     capacity = request.form["capacity"]
-#     difficulty = request.form["difficulty"]
-#     session = Session(name, room, duration, capacity, difficulty, id)
-#     session_repository.update(session)
-#     return redirect("/sessions")
-
-# @bookings_blueprint.route("/bookings/<id>/delete", methods=["POST"])
-# def delete_session(id):
-#     session_repository.delete(id)
-#     return redirect("/sessions")
+@bookings_blueprint.route("/bookings/<id>", methods=["POST"])
+def update_booking(id):
+    member_id = request.form["member_id"]
+    session_id = request.form["session_id"]
+    notes = request.form["notes"]
+    member = member_repository.select(member_id)
+    session = session_repository.select(session_id)
+    booking = Booking(member, session, notes, id)
+    booking_repository.update(booking)
+    return redirect("/booking")

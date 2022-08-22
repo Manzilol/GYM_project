@@ -22,7 +22,7 @@ def select(id):
     
     if results:
         result = results[0]
-        member = Member(result['name'], result['age'], results['sex'], results['id'])
+        member = Member(result['name'], result['age'], result['sex'], result['id'])
     return member
 
 def select_all():

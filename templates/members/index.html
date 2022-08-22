@@ -11,7 +11,7 @@
     <p>Sex:{{ member.sex}}</p> 
     <p>I.D:{{ member.id}}</p> 
 
-    <a href="/members/{{ member.id }}/edit"></a>
+    <a href="/members/{{ member.id }}/edit">Edit</a>
     <form action="/members/{{ member.id }}/delete" method = "POST">
         <input type="submit" value="DELETE">
     </form>

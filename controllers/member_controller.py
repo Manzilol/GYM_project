@@ -13,3 +13,12 @@ def members():
 @members_blueprint.route("/members/new")
 def new_member():
     return render_template("/members/new.html")
+
+@members_blueprint.route("/members", methods=["POST"])
+def create_member():
+    name = request.form["name"]
+    age = request.form["age"]
+    sex = request.form["sex"]
+    new_member = Member(name, age, sex)
+    member_repository.save(new_member)
+    return redirect("/members")

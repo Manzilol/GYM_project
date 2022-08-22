@@ -22,7 +22,7 @@ def select(id):
     
     if results:
         result = results[0]
-        session = Session(result['name'], result['room'], results['duration'], results['capacity'], results['difficulty'], results['id'])
+        session = Session(result['name'], result['room'], result['duration'], result['capacity'], result['difficulty'], result['id'])
     return session
 
 def update(session):
@@ -36,7 +36,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        session = Session(row['name'], row['age'], row['sex'], row['id'])
+        session = Session(row['name'], row['room'], row['duration'], row['capacity'], row['difficulty'], row['id'])
         sessions.append(session)
     return session
 

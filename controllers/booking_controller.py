@@ -47,3 +47,8 @@ def update_booking(id):
     booking = Booking(member, session, notes, id)
     booking_repository.update(booking)
     return redirect("/booking")
+
+@bookings_blueprint.route("/bookings/<id>/delete", methods=["POST"])
+def delete_booking(id):
+    booking_repository.delete(id)
+    return redirect("/bookings")

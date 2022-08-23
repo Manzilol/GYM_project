@@ -50,3 +50,4 @@ def delete(id):
     sql = "DELETE FROM bookings WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+

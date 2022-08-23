@@ -2,6 +2,7 @@ from flask import Blueprint, Flask, redirect, render_template, request
 
 from models.session import Session
 import repositories.session_repository as session_repository
+import repositories.member_repository as member_repository
 
 sessions_blueprint = Blueprint("sessions", __name__)
 
@@ -46,8 +47,9 @@ def delete_session(id):
     session_repository.delete(id)
     return redirect("/sessions")
 
-# not needed 
-# @sessions_blueprint.route("/sessions/enrolled")
-# def enrolled_session_form():
-#     return render_template("/sessions/enrolled.html")
+@sessions_blueprint.route("/sessions/<id>/moredetails")
+def more_details(id):
+    members = member_repository.by_session(id)
+    session = session_repository.select(id)
+    return render_template('sessions/more_details.html', members = members, sessions=session)
 

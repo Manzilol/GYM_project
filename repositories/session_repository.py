@@ -45,12 +45,4 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-def enrolled(session_id):
-    members = []
-    sql = "SELECT members.* FROM members INNER JOIN bookings on bookings.member_id  = members.id WHERE session_id = %s"
-    values = [session_id]
-    results = run_sql(sql, values)
-    for result in results:
-        member = Member(result['name'], result['age'], result['sex'], result['id'])
-        members.append(member)
-    return members
+

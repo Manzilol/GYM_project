@@ -1,6 +1,7 @@
 {% extends "base.html"%}
 {% block content %}
 
+
 <p class="enrolled">Enrolled in {{session.session_id}}:</p>
         {% for member in members %}
             <p>{{ member.name }}</p>

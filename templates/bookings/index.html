@@ -6,7 +6,7 @@
 {% for booking in bookings %}
 
 <section>
-    <p>{{ booking.member.name }} booked session: {{ booking.session.name }}</p>
+    <p>{{ booking.member.name }} booked session: {{ booking.session.name }} Notes: {{booking.notes}} </p>
     <a href="/bookings/{{ booking.id }}/edit">Edit</a>
     <form action="/bookings/{{ booking.id }}/delete" method="POST">
         <input type="submit" value="Delete">

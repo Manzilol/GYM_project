@@ -10,13 +10,13 @@ bookings_blueprint = Blueprint("bookings", __name__)
 @bookings_blueprint.route("/bookings")
 def bookings():
     bookings = booking_repository.select_all()
-    return booking_repository("/bookings/index.html", bookings=bookings)
+    return render_template("/bookings/index.html", bookings=bookings)
 
-@bookings_blueprint.route("bookings/new")
+@bookings_blueprint.route("/bookings/new")
 def new_booking():
     members = member_repository.select_all()
     sessions = session_repository.select_all()
-    return render_template("bookings/new.html", members=members, sessions=sessions)
+    return render_template("/bookings/new.html", members=members, sessions=sessions)
 
 @bookings_blueprint.route("/bookings", methods=["POST"])
 def create_booking():
@@ -34,7 +34,7 @@ def edit_booking(id):
     booking = booking_repository.select(id)
     members = member_repository.select_all()
     sessions = session_repository.select_all()
-    return render_template('bookings/edit.html', booking=booking, members=members, sessions=sessions)
+    return render_template('/bookings/edit.html', booking=booking, members=members, sessions=sessions)
 
 
 @bookings_blueprint.route("/bookings/<id>", methods=["POST"])

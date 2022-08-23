@@ -20,12 +20,16 @@ def select_all():
     sql = "SELECT * FROM bookings"
     results = run_sql(sql)
 
-    for row in results:
-        booking = Booking(row['member'], row['session'], row['notes'], row['id'])
+    for result in results:
+        member = member_repository.select(result["member_id"])
+        session = session_repository.select(result["session_id"])
+        booking = Booking(member, session, result["notes"], result["id"])
         bookings.append(booking)
     return bookings
 
+
 def select(id):
+    booking = None
     sql = "SELECT * FROM bookings WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)

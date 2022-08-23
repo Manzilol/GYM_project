@@ -10,7 +10,8 @@ bookings_blueprint = Blueprint("bookings", __name__)
 @bookings_blueprint.route("/bookings")
 def bookings():
     bookings = booking_repository.select_all()
-    return render_template("bookings/index.html", bookings=bookings)
+    sessions = session_repository.select_all()
+    return render_template("bookings/index.html", bookings=bookings, sessions=sessions)
 
 @bookings_blueprint.route("/bookings/new")
 def new_booking():

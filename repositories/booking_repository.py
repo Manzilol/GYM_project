@@ -43,7 +43,7 @@ def select(id):
 
 def update(booking):
     sql = "UPDATE bookings SET (member_id, session_id, notes) = (%s, %s, %s) WHERE id = %s"
-    values = [booking.member.id, booking.sesson.id, booking.notes, booking.id]
+    values = [booking.member.id, booking.session.id, booking.notes, booking.id]
     run_sql(sql, values)
 
 def delete(id):

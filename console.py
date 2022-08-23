@@ -38,11 +38,12 @@ booking_repository.save(booking2)
 booking3 = Booking(member3, session2, "This is the closest it feels to being back in space")
 booking_repository.save(booking3)
 
-all_members = member_repository.select_all()
-for member in all_members:
-    print(member.__dict__)
+# all_members = member_repository.select_all()
+# for member in all_members:
+#     print(member.__dict__)
 
-
+members = session_repository.enrolled(session1.id)
+print(members[0].name)
 # pdb.set_trace()
 
 

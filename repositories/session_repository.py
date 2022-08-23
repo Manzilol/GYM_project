@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 
 from models.session import Session
+from models.member import Member
 
 def save(session):
     sql = "INSERT INTO sessions(name, room, duration, capacity, difficulty) VALUES (%s, %s, %s, %s, %s) RETURNING id"
@@ -43,3 +44,13 @@ def delete(id):
     sql = "DELETE FROM sessions WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def enrolled(session):
+    members = []
+    sql = "SELECT members.* FROM members INNER JOIN bookings on bookings.session_id  = sessions.id WHERE session_id = %s"
+    values = [session.id]
+    results = run_sql(sql, values)
+    for result in results:
+        member = Member(result['name'])
+        members.append(member)
+    return members

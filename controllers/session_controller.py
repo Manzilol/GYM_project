@@ -45,3 +45,14 @@ def update_session(id):
 def delete_session(id):
     session_repository.delete(id)
     return redirect("/sessions")
+
+@sessions_blueprint.route("/sessions/enrolled")
+def enrolled_session_form():
+    return render_template("/sessions/enrolled.html")
+
+@sessions_blueprint.route("/sessions/<id>", methods = ["POST"])
+def session_members_enrolled(id):
+    session = session_repository.select(id)
+    members = session_repository.enrolled(session)
+    return render_template("sessions/enrolled.html", session=session, members = members)
+

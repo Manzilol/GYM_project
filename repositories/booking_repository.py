@@ -50,8 +50,3 @@ def delete(id):
     sql = "DELETE FROM bookings WHERE id = %s"
     values = [id]
     run_sql(sql, values)
-
-def enrolled(id):
-    sql = "SELECT FROM bookings WHERE session_id = %s"
-    values = [id]
-    run_sql(sql, values)

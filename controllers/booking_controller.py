@@ -52,3 +52,7 @@ def update_booking(id):
 def delete_booking(id):
     booking_repository.delete(id)
     return redirect("/bookings")
+
+@bookings_blueprint.route("/bookings/enrollment")
+def enrolled():
+    

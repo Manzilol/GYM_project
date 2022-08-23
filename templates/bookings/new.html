@@ -19,7 +19,7 @@
         <select name="session_id" id="session">
             {% for session in sessions %}
             <option value="{{ session.id }}">
-                {{ zombie.name }}
+                {{ session.name }}
             </option>
             {% endfor %}
         </select>

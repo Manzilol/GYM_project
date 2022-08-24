@@ -40,6 +40,10 @@ header>h1{
     text-decoration: none;
 }
 
+/* .members_title{
+    margin-top: 0px;
+} */
+
 .container{
     display: flex;
     background-color: #9dab7d;

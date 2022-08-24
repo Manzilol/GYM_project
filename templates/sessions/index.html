@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Sessions:</h1>
+<h2 class="session_heading">Sessions:</h2>
 
-{% for session in sessions %}
+
 
 <section class="session">
-    <p>Name:{{ session.name }}</p> 
-    <p>Room:{{ session.room }}</p> 
-    <p>Duration:{{ session.duration }}</p> 
-    <p>Capacity:{{ session.capacity }}</p> 
-    <p>Difficulty:{{ session.difficulty }}</p> 
-    <p>I.D:{{ session.id }}</p> 
+    {% for session in sessions %}
+    <div class="one_session">
+        <div class="session_image_and_name">
+            <img class="session_logo" src="https://www.seekpng.com/png/detail/794-7947917_dumbbell-variant-outline-free-vector-icons-designed-fit.png" alt="logo">
+            <p>Name:{{ session.name }}</p> 
+        </div>
+        <p>Room:{{ session.room }}</p> 
+        <p>Duration:{{ session.duration }}</p> 
+        <p>Capacity:{{ session.capacity }}</p> 
+        <p>Difficulty:{{ session.difficulty }}</p> 
+        <p>I.D:{{ session.id }}</p> 
+        <a href="/sessions/{{session.id}}/moredetails">More Details</a>
+        <a href="/sessions/{{ session.id }}/edit">Edit</a>
+        <form action="/sessions/{{ session.id }}/delete" method = "POST">
+            <input type="submit" value="DELETE">
+        </form>
+    </div>
 
-    <a href="/sessions/{{session.id}}/moredetails">More Details</a>
-    <a href="/sessions/{{ session.id }}/edit">Edit</a>
-    <form action="/sessions/{{ session.id }}/delete" method = "POST">
-        <input type="submit" value="DELETE">
-    </form>
+    {% endfor %}
 </section>
 
-{% endfor %}
+
 {% endblock %}

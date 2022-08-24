@@ -36,6 +36,18 @@ header>h1{
     
 }
 
+.member_actions{
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+.member_actions>li>a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .home{
     text-decoration: none;
 }

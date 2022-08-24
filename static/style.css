@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
+html{
+    background-image: url(images/pexels-asad-photo-maldives-1320684.jpg);
+    background-repeat: space repeat;
+    background-size: cover;
+}
+
 body{
     font-family: 'Raleway', sans-serif; font-size: 16px;
+    min-height: 100vh;
+    margin: 0px;
   }
 
 header{
-    background-color: rgb(3, 185, 0);
+    background-color: #9dab7d;
     border-radius: 45px;
 }
 
 header>h1{
     display: flex;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(21, 21, 21);
+    color:rgb(44, 44, 44);
     justify-content: center;
     font-size: 60px;
 }
@@ -24,6 +32,8 @@ header>h1{
     margin: 32px;
     justify-content: space-between;
     list-style: none;
+    font-size: 28px;
+    
 }
 
 .home{
@@ -32,10 +42,11 @@ header>h1{
 
 .container{
     display: flex;
-    background-color: rgb(222, 222, 222);
-    color: brown;
+    background-color: #9dab7d;
+    color: rgb(44, 44, 44);
     align-items: center;
     flex-direction: column;
     margin-left: 300px;
     margin-right: 300px;
+    min-height: 100vh;
 }

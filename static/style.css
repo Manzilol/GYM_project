@@ -36,6 +36,7 @@ header>h1{
     
 }
 
+
 .member_actions{
     list-style: none;
     text-decoration: none;
@@ -46,15 +47,13 @@ header>h1{
     display: flex;
     justify-content: center;
     text-decoration: none;
+    color: rgb(10, 10, 10);
 }
 
 .home{
     text-decoration: none;
 }
 
-/* .members_title{
-    margin-top: 0px;
-} */
 
 .container{
     display: flex;

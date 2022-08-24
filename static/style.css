@@ -40,7 +40,7 @@ header>h1{
 .member_actions{
     list-style: none;
     text-decoration: none;
-    
+    padding-left: 0px;
 }
 
 .member_actions>li>a{
@@ -52,6 +52,7 @@ header>h1{
 
 .home{
     text-decoration: none;
+    color: rgb(10, 10, 10);
 }
 
 

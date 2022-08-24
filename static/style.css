@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif; font-size: 16px;
+  }
+
+header{
+    background-color: rgb(3, 185, 0);
+    border-radius: 45px;
+}
+
+header>h1{
+    display: flex;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(21, 21, 21);
+    justify-content: center;
+    font-size: 60px;
+}
+
+.menu{
+    display: flex;
+    padding: 16px;
+    margin: 32px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.home{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(222, 222, 222);
+    color: brown;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-right: 300px;
+}

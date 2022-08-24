@@ -55,6 +55,38 @@ header>h1{
     padding: 5px;
 }
 
+.session_actions{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.session_actions>li>a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    border: 2px solid rgb(10,10,10);
+    padding: 5px;
+}
+
+.booking_actions{
+    list-style: none;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.booking_actions>li>a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    border: 2px solid rgb(10,10,10);
+    padding: 5px;
+}
+
+
+
 .home{
     text-decoration: none;
     color: rgb(10, 10, 10);
@@ -82,7 +114,6 @@ header>h1{
 .session{
     display:flex;
     flex-wrap: wrap;
-    /* border: 2px solid rgb(10, 10, 10); */
     padding: 16px;
     justify-content: space-around;
 }
@@ -93,7 +124,7 @@ header>h1{
     border: 3px solid rgb(10, 10, 10);
     border-radius: 30px;
     margin:20px 10px;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 16px;
     width: 20vw;
 }
@@ -104,6 +135,73 @@ header>h1{
 }
 
 .session_logo{
+    width: 50px;
+    height: 50px;
+    margin: 16px;
+}
+
+.member_heading{
+    text-align: center;
+}
+
+.member{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    justify-content: space-around;
+}
+
+.one_member{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(10, 10, 10);
+    border-radius: 30px;
+    margin:20px 10px;
+    justify-content: space-between;
+    padding: 16px;
+    width: 20vw;
+}
+
+.member_image_and_name{
+    display: flex;
+
+}
+
+.member_logo{
+    width: 50px;
+    height: 50px;
+    margin: 16px;
+}
+
+
+.booking_heading{
+    text-align: center;
+}
+
+.booking{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    justify-content: space-around;
+}
+
+.one_booking{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(10, 10, 10);
+    border-radius: 30px;
+    margin:20px 10px;
+    justify-content: space-between;
+    padding: 16px;
+    width: 20vw;
+}
+
+.booking_image{
+    display: flex;
+
+}
+
+.member_logo{
     width: 50px;
     height: 50px;
     margin: 16px;

@@ -1,17 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Bookings</h2>
+<h2 class="booking_heading">Bookings</h2>
 
-{% for booking in bookings %}
 
-<section>
-    <p>{{ booking.member.name }} booked session: {{ booking.session.name }} Notes: {{booking.notes}} </p>
-    <a href="/bookings/{{ booking.id }}/edit">Edit</a>
-    <form action="/bookings/{{ booking.id }}/delete" method="POST">
-        <input type="submit" value="Delete">
-    </form>
+
+<section class="booking">
+    {% for booking in bookings %}
+    <div class="one_booking">
+        <div class="booking_image">
+            <img class="booking logo" src="" alt="booking_logo">
+        </div>
+        <!-- could {{booking.id}} be put here ?-->
+        <p>{{ booking.member.name }} has booked session: {{ booking.session.name }} </p>
+        <p> Notes: {{booking.notes}} </p>
+        <a href="/bookings/{{ booking.id }}/edit">Edit</a>
+        <form action="/bookings/{{ booking.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+
+    {% endfor %}
 </section>
 
-{% endfor %}
 {% endblock %}

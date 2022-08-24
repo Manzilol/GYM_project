@@ -70,4 +70,12 @@ header>h1{
     min-height: 100vh;
     border-radius: 45px;
     border: 4px solid rgb(10, 10, 10)
+
+}
+
+.session{
+    display:flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(10, 10, 10);
+    padding: 16px;
 }

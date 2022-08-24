@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Booking</h2>
+<h2 class="new_booking_header">Add a New Booking</h2>
 
-<form action="/bookings" method="POST">
+<form class="new_booking_form" action="/bookings" method="POST">
+<div class="new_booking">
     <div>
         <label for="member">Member:</label>
         <select name="member_id" id="member">
@@ -31,6 +32,7 @@
     <div>
         <input type="submit">
     </div>
+</div>
 </form>
 
 {% endblock %}

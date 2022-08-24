@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Add a New Session!</h2>
+<h2 class="new_session_header">Add a New Session!</h2>
 
-<form action="/sessions" method="POST">
+<form  class="new_session_form" action="/sessions" method="POST">
+<div class="new_session">
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value>
@@ -22,6 +23,7 @@
 
         <input type="submit">
     </div>
+</div>
 </form>
 
 {% endblock %}

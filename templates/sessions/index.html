@@ -10,17 +10,17 @@
     <div class="one_session">
         <div class="session_image_and_name">
             <img class="session_logo" src="https://www.seekpng.com/png/detail/794-7947917_dumbbell-variant-outline-free-vector-icons-designed-fit.png" alt="logo">
-            <p>Name:{{ session.name }}</p> 
+            <p>Name: {{ session.name }}</p> 
         </div>
-        <p>Room:{{ session.room }}</p> 
-        <p>Duration:{{ session.duration }}</p> 
-        <p>Capacity:{{ session.capacity }}</p> 
-        <p>Difficulty:{{ session.difficulty }}</p> 
-        <p>I.D:{{ session.id }}</p> 
-        <a href="/sessions/{{session.id}}/moredetails">More Details</a>
-        <a href="/sessions/{{ session.id }}/edit">Edit</a>
+        <p>Room: {{ session.room }}</p> 
+        <p>Duration: {{ session.duration }}</p> 
+        <p>Capacity: {{ session.capacity }}</p> 
+        <p>Difficulty: {{ session.difficulty }}</p> 
+        <p>I.D: {{ session.id }}</p> 
+        <a class="session_more_details" href="/sessions/{{session.id}}/moredetails">More Details</a>
+        <a class="session_edit" href="/sessions/{{ session.id }}/edit">Edit</a>
         <form action="/sessions/{{ session.id }}/delete" method = "POST">
-            <input type="submit" value="DELETE">
+            <input class="session_delete_button" type="submit" value="DELETE">
         </form>
     </div>
 

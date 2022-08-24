@@ -96,6 +96,9 @@ header>h1{
 .home{
     text-decoration: none;
     color: rgb(10, 10, 10);
+    border: 3px solid rgb(10, 10, 10);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 
@@ -111,6 +114,21 @@ header>h1{
     border: 4px solid rgb(10, 10, 10);
     flex-wrap: wrap;
 
+}
+
+.welcome{
+    text-align: center;
+    font-size: 65px;
+}
+
+.about{
+    text-align: center;
+    font-size: 29px;
+}
+
+.important-word{
+    font-size: 55px;
+    text-decoration: underline;
 }
 
 .session_heading{
@@ -142,9 +160,62 @@ header>h1{
 }
 
 .session_logo{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 16px;
+}
+
+.session_more_details{
+    width: 6rem;
+    border: 2px solid rgb(10, 10, 10);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.session_edit{
+    width: 2rem;
+    border: 2px solid rgb(10, 10, 10);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.session_delete_button{
+    border: 2px solid rgb(10, 10, 10);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.update_a_session{
+    text-align: center;
+    font-size: 34px;
+}
+
+.update_session_form{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.session_form{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+
+.members_registered_heading{
+    text-align: center;
+    font-size: 48px;
+}
+
+.members_list{
+    text-align: center;
+}
+
+.member_list_name{
+    font-size: 32px;
+    border: 4px solid rgb(10, 10, 10);
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .member_heading{
@@ -176,11 +247,40 @@ header>h1{
 }
 
 .member_logo{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 16px;
 }
 
+.member_edit{
+    width: 2rem;
+    border: 2px solid rgb(10, 10, 10);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.member_delete_button{
+    border: 2px solid rgb(10, 10, 10);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.update_a_member{
+    text-align: center;
+    font-size: 34px;
+}
+
+.update_member_form{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.member_form{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
 
 .booking_heading{
     text-align: center;
@@ -211,8 +311,8 @@ header>h1{
 }
 
 .booking_logo{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 16px;
 }
 
@@ -227,4 +327,26 @@ header>h1{
     border: 2px solid rgb(10, 10, 10);
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.update_a_booking{
+    text-align: center;
+    font-size: 34px;
+
+}
+
+.update_a_booking_form{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.booking_form{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+
+.notes_bit{
+    width: 180px;
 }

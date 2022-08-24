@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Update a Booking</h2>
+<h2 class="update_a_booking">Update a Booking</h2>
 
-<form action="/bookings/{{ booking.id }}" method="POST">
+<form class="update_a_booking_form" action="/bookings/{{ booking.id }}" method="POST">
+<div class="booking_form">
     <div>
         <label for="member">Member:</label>
         <select name="member_id" id="member">
@@ -24,13 +25,14 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="notes_bit">
         <label for="notes">Notes:</label>
         <input type="text" id="notes" name="notes" value="{{ booking.notes }}">
     </div>
     <div>
         <input type="submit">
     </div>
+</div>
 </form>
 
 {% endblock %}

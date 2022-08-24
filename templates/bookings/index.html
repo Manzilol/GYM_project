@@ -9,8 +9,8 @@
     {% for booking in bookings %}
     <div class="one_booking">
         <div class="booking_image_and_id">
-            <img class="booking logo" src="" alt="booking_logo">
-            <p>I.D:{{booking.id}}</p>
+            <img class="booking_logo" src="https://media.istockphoto.com/vectors/book-icon-with-editable-stroke-vector-id1278447873?k=20&m=1278447873&s=612x612&w=0&h=F6LVAw4N7fQeBLQQV9_n2JUoqjtFKwvaekPmIn-k-DA=" alt="booking_logo">
+            <p>I.D: {{booking.id}}</p>
             <!-- might not work with id attached -->
         </div>
         <p>{{ booking.member.name }} has booked session: {{ booking.session.name }} </p>

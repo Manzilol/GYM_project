@@ -8,14 +8,14 @@
     <div class="one_member">
             <div class="member_image_and_name">
                 <img class="member_logo" src="https://thumbs.dreamstime.com/b/profile-picture-placeholder-icon-design-white-bubble-chat-head-user-s-figure-avatar-vector-illustration-198816164.jpg" alt="member_photo">
-                <p>Name:{{ member.name}}</p>
+                <p>Name: {{ member.name}}</p>
             </div>
-            <p>Age:{{ member.age}}</p> 
-            <p>Sex:{{ member.sex}}</p> 
-            <p>I.D:{{ member.id}}</p> 
-             <a href="/members/{{ member.id }}/edit">Edit</a>
+            <p>Age: {{ member.age}}</p> 
+            <p>Sex: {{ member.sex}}</p> 
+            <p>I.D: {{ member.id}}</p> 
+             <a class="member_edit" href="/members/{{ member.id }}/edit">Edit</a>
             <form action="/members/{{ member.id }}/delete" method = "POST">
-                <input type="submit" value="DELETE">
+                <input class="member_delete_button" type="submit" value="DELETE">
             </form>
         </div>
 

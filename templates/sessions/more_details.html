@@ -1,10 +1,10 @@
 {% extends "base.html"%}
 {% block content %}
-<h1>Members Enrolled:</h1>
+<h1 class="members_registered_heading">Members Registered:</h1>
 
-<p class="enrolled"></p>
+<div class="members_list">
         {% for member in members %}
-            <p>{{ member.name }}</p>
+            <p class="member_list_name">{{ member.name }}</p>
         {% endfor %}
-
+</div>
 {% endblock %}

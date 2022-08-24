@@ -8,15 +8,16 @@
 <section class="booking">
     {% for booking in bookings %}
     <div class="one_booking">
-        <div class="booking_image">
+        <div class="booking_image_and_id">
             <img class="booking logo" src="" alt="booking_logo">
+            <p>I.D:{{booking.id}}</p>
+            <!-- might not work with id attached -->
         </div>
-        <!-- could {{booking.id}} be put here ?-->
         <p>{{ booking.member.name }} has booked session: {{ booking.session.name }} </p>
         <p> Notes: {{booking.notes}} </p>
-        <a href="/bookings/{{ booking.id }}/edit">Edit</a>
+        <a class="booking_edit" href="/bookings/{{ booking.id }}/edit">Edit</a>
         <form action="/bookings/{{ booking.id }}/delete" method="POST">
-            <input type="submit" value="Delete">
+            <input class="booking_delete_button" type="submit" value="Delete">
         </form>
     </div>
 

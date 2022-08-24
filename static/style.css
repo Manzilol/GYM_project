@@ -15,7 +15,9 @@ body{
 
 header{
     background-color: #9dab7d;
-    border-radius: 45px;
+    border-radius: 0px;
+    /* border-color: black; */
+    border: 5px solid rgb(10, 10, 10);
 }
 
 header>h1{
@@ -24,6 +26,7 @@ header>h1{
     color:rgb(44, 44, 44);
     justify-content: center;
     font-size: 60px;
+    margin-top: 0px;
 }
 
 .menu{
@@ -65,4 +68,6 @@ header>h1{
     margin-left: 300px;
     margin-right: 300px;
     min-height: 100vh;
+    border-radius: 45px;
+    border: 4px solid rgb(10, 10, 10)
 }
